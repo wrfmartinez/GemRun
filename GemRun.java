@@ -26,7 +26,31 @@ public class GemRun {
         /* TODO: Initializing The Game
          * - Initialize the player and/or gem positions if user entered -1
          * - Print the starter board */
+        // Sets the randomPosition variable to a random number between 0 and 19
+        int randomPosition = (int) ((MAZE_SIZE - 1) * Math.random());
+        // Checks if either player or gem is equal to -1 if so then sets it to the randomPosition value
+        if (player == -1) {
+            player = randomPosition;
+        }
 
+        if (gem == -1) {
+            gem = randomPosition;
+        }
+
+        // Prints the starter board
+        for (int i = 0; i < MAZE_SIZE; i++) {
+            // Sets the "P" based on player input then skips the iteration
+            if (player == i) {
+                System.out.print("P");
+                continue;
+            }
+            // Sets the "_" based on gem input then skips the iteration
+            if (gem == i) {
+                System.out.print("_");
+                continue;
+            }
+            System.out.print("_");
+        }
 
 
         /* TODO: Progressing The Game
@@ -41,7 +65,7 @@ public class GemRun {
          * - Print the victory message */
 
 
-         
+
 
         // Scanner incantation finish
         input.close();
