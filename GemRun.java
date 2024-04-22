@@ -61,7 +61,6 @@ public class GemRun {
                 // Places "P" one position to the left then prints a new board
                 if (player > 0 && player < MAZE_SIZE) {
                     player--;
-                    System.out.println(player);
                     for (int i = 0; i < MAZE_SIZE; i++) {
                         if (player == i) {
                             System.out.print("P");
@@ -98,9 +97,15 @@ public class GemRun {
         /* TODO: Ending The Game
          * - Print the final board
          * - Print the victory message */
-
-
-
+        for (int i = 0; i < MAZE_SIZE; i++) {
+            if (player == i) {
+                System.out.print("*");
+                continue;
+            }
+            System.out.print("_");
+        }
+        System.out.println("\n");
+        System.out.println("Found the gem!");
 
         // Scanner incantation finish
         input.close();
