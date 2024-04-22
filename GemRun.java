@@ -52,8 +52,48 @@ public class GemRun {
          * - Ask for player input
          * - Update variables and print messages accordingly
          * - Print the updated board */
+         while (player != gem) {
+            System.out.print("Enter a direction (left or right): ");
+            char dir = input.next().toLowerCase().charAt(0);
+            ;
+            input.nextLine();
+            if (dir == 'l') {
+                // Places "P" one position to the left then prints a new board
+                if (player > 0 && player < MAZE_SIZE) {
+                    player--;
+                    System.out.println(player);
+                    for (int i = 0; i < MAZE_SIZE; i++) {
+                        if (player == i) {
+                            System.out.print("P");
+                            continue;
+                        }
+                        System.out.print("_");
+                    }
+                    System.out.println("\n");
+                }
+            } else if (dir == 'r') {
+                // Places "P" one position to the right then prints a new board
+                if (player > 0 && player < MAZE_SIZE) {
+                    player++;
+                    for (int i = 0; i < MAZE_SIZE; i++) {
+                        if (player == i) {
+                            System.out.print("P");
+                            continue;
+                        }
+                        System.out.print("_");
+                    }
+                    System.out.println("\n");
+                }
+            }
 
-
+            // Checks the absolute value of player subtracted by gem to print helpful
+            // distance messages
+            if (Math.abs(player - gem) >= 7) {
+                System.out.println("Very cold!");
+            } else if (Math.abs(player - gem) == 1) {
+                System.out.println("Very Warm!");
+            }
+        }
 
         /* TODO: Ending The Game
          * - Print the final board
