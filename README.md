@@ -1,7 +1,7 @@
 # GGU Capstone Assignment Part One: Gem Run
 
 ### Setting Up
-Go to [Repl.it](https://replit.com/@williamm275/GemRun#GemRun.java)
+Go to [Repl.it](https://replit.com/@williamm275/GemRun)
 
 Note that I did not need to understand how the code works for this assignment! Comments explain the existing code. The TODO comments mark steps of implementation. The Use of corresponding sections in the Implementation section below was used to code one TODO item at a time. Then, with the use of top-bottom design or bottom-top design I planned and executed my implementation.
 
