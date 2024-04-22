@@ -44,11 +44,6 @@ public class GemRun {
                 System.out.print("P");
                 continue;
             }
-            // Sets the "_" based on gem input then skips the iteration
-            if (gem == i) {
-                System.out.print("_");
-                continue;
-            }
             System.out.print("_");
         }
 
